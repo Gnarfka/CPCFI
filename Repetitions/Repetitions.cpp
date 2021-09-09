@@ -15,7 +15,7 @@ int main(){
 			cont = 1;
 		}
 		if(cont>=aux){
-				aux = con;
+				aux = cont;
 		}
 	}
 
