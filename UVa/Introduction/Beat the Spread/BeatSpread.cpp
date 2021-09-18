@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
 
@@ -21,7 +20,7 @@ int main(){
 				cout << x << " " << y << endl;
 			}
 			else{
-				cout << y << " " << abs(x) << endl;
+				cout << y << " " << x << endl;
 			}
 		}		
 	}
