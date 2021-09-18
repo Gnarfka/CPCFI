@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main() {
+int main(){
 	int months, depNumber;
 	double payment, loan;
 
