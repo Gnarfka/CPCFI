@@ -3,6 +3,16 @@
 
 using namespace std;
 
+bool comparator(char A, char B){
+	// 		a     ==      a
+	if(tolower(A) == tolower(B)){
+		//     a < A
+		return A < B;
+	}
+	//			a     <    b || B
+	return tolower(A) < tolower(B);
+}
+
 int main(){
 	int n;
 	string input;
@@ -11,9 +21,9 @@ int main(){
 
 	for(int i = 0; i < n; i++){
 		cin >> input;
-		sort(input.begin(), input.end());
+		sort(input.begin(), input.end(), comparator);
 		do {
 	    	cout << input << endl;
-	  	}while (next_permutation(input.begin(), input.end()));
+	  	}while (next_permutation(input.begin(), input.end(), comparator));
 	}
 }
