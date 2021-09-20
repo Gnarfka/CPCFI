@@ -6,12 +6,10 @@ using namespace std;
 int main(){
 	int S, B, L, R;
 	string L_out, R_out;
-	while(true){
-		cin >> S >> B;
-		if((S == 0) && (B == 0)){
-			break;
-		}
-		
+	
+	cin >> S >> B;
+
+	while(S || B){
 		bool dead[S+1] = { false };
 
 		dead[0] = true;
@@ -52,6 +50,7 @@ int main(){
 
 		}
 		cout<<"-"<<endl;
+		cin >> S >> B;
 	}
 	return 0;
 }
