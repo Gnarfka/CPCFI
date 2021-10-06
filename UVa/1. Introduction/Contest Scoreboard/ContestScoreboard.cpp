@@ -30,9 +30,10 @@ int main(){
 
 	cin >> cases;
 
-	getline(cin, input); // Ignorando linea en blanco tras test cases
+	cin.ignore(); // Ignorando linea en blanco tras test cases
+	cin.ignore();
 
-	for(int test = 0; test <= cases; test++){
+	for(int test = 0; test < cases; test++){
 		Contestant arrContestants[133];
 		int totalContestants = 0;
 		set<int, greater<int>> addedIds;
@@ -67,9 +68,6 @@ int main(){
 
 			status = input[i+1];
 
-			//cout << id << " " << problem << " " << time << " " << status << endl;
-
-
 			if(arrContestants[id].completed[problem] == true){
 				continue;
 			}
@@ -95,7 +93,10 @@ int main(){
 		for(int i = 0; i < totalContestants; i++){
 			cout << arrContestants[i].id << " " << arrContestants[i].solved << " " << arrContestants[i].time << endl;
 		}
-		cout << endl;
+		
+		if(test < cases-1){
+			cout << endl;
+		}
 	}
 
 	return 0;
